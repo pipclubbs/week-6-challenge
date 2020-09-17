@@ -1,0 +1,127 @@
+h1,
+h2,
+span {
+  font-family: "Oxygen", sans-serif;
+}
+
+h1 {
+  font-size: 50px;
+  text-align: center;
+  margin-bottom: 0;
+}
+
+h2 {
+  font-size: 30px;
+  text-align: right;
+  margin-bottom: 15px;
+  font-weight: 580;
+}
+
+ul.reset-current {
+  list-style: none;
+  text-align: right;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.reset-current li {
+  display: inline;
+}
+
+.container {
+  background-image: linear-gradient(
+    to top,
+    #f3e7e9 0%,
+    #e3eeff 99%,
+    #e3eeff 100%
+  );
+  max-width: 600px;
+  border-radius: 10px;
+  margin-top: 30px;
+  padding: 25px;
+}
+
+.celsiusFarenheit {
+  font-size: 20px;
+  opacity: 75%;
+  position: relative;
+  bottom: 20px;
+  right: 12px;
+}
+
+.celsius {
+  color: grey;
+}
+
+.farenheit {
+  color: grey;
+}
+
+.footer {
+  text-align: center;
+  opacity: 50%;
+  margin: 0 0 20px 0;
+}
+.currentDayAndTime {
+  text-align: center;
+  margin-bottom: 0;
+  opacity: 30%;
+  font-weight: 400;
+}
+
+.fa-sun {
+  color: #fbc02d;
+}
+
+.main.fa-sun {
+  font-size: 50px;
+}
+
+.future.fa-sun {
+  font-size: 25px;
+}
+
+.form-control {
+  margin-top: 20px;
+}
+
+.main-temperature {
+  font-size: 50px;
+  text-align: center;
+}
+
+.main-temperature.col-12 {
+  margin-bottom: 15px;
+}
+
+.current-cond {
+  font-size: 15px;
+}
+
+.current-conditions div {
+  text-align: left;
+}
+
+.current-conditions.row {
+  margin-left: 0px;
+}
+
+.five-day-forecast.col-12 {
+  position: relative;
+  bottom: -22px;
+  text-align: right;
+}
+
+.card {
+  margin: 0;
+  background: transparent;
+  border: none;
+  font-family: "oxygen", sans-serif;
+  line-height: 15px;
+}
+
+.conditions-text.card-body {
+  padding: 0 20 20 20;
+}

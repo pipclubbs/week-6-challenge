@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shecodes Plus Final Project</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://kit.fontawesome.com/3943d06ef2.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oxygen&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="src/style.css" />
+  </head>
+  <body>
+    <div class="container shadow p-3 mb-5 bg-white">
+      <div class="row">
+        <div class="col-6">
+          <div class="col-12 city">
+            <h1 id="searched-city">Newcastle</h1>
+          </div>
+          <div class="row">
+            <div class="col-12">
+              <h2 class="currentDayAndTime" id="current-day-and-time">
+                today's time
+              </h2>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12 main-temperature">
+              <i class="fas fa-sun main" id="current-weather-icon"></i>
+              <span class="main-temperature"><span class="main-temp" id="main-temp">
+                18</span>
+                <span class="celsiusFarenheit"><a href="#" class="celsius" id="celsius"> ºC </a>|<a href="#" class="farenheit" id="farenheit">ºF</a> </span>
+              </span></span>
+            </div>
+          </div>
+
+          <div class="row shadow p-3 mb-5 rounded current-conditions">
+            <div class="col-12 conditions-text">
+              <div class="card">
+                <div class="card-body">
+                  <span class="current-cond">Feels like <span class="feels-like" id="feels-like">12ºC</span></span>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 conditions-text">
+              <div class="card">
+                <div class="card-body">
+                  <span class="current-cond">High <span class="high-temp" id="high-temp">17ºC</span></span>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 conditions-text">
+              <div class="card">
+                <div class="card-body">
+                  <span class="current-cond">Low <span class="low-temp" id="low-temp">8ºC</span></span>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 conditions-text">
+              <div class="card">
+                <div class="card-body">
+                  <span class="current-cond">Humidity <span class="humidity" id="humidity">90%</span></span>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 conditions-text">
+              <div class="card">
+                <div class="card-body">
+                  <span class="current-cond">Wind <span class="wind-speed" id="wind-speed">8km/h</span></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-6">
+          <div class="col-12">
+            <form id="search-form">
+              <div class="form-group">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="city-search"
+                  placeholder="Search..."
+                />
+                <ul class="reset-current">
+                  <li>
+                    <small id="reset" class="text-muted">RESET</small>
+                  </li>
+                  <li>
+                    <small id="carat" class="text-muted">|</small>
+                  </li>
+                  <li>
+                    <a href="#"><small id="current-loc" class="text-muted"
+                      >CURRENT LOCATION</small
+                    ></a>
+                  </li>
+                </ul>
+              </div>
+            </form>
+          </div>
+
+          <div class="col-12 shadow p-3 mb-5 rounded five-day-forecast">
+            <div class="row">
+              <div class="col-12">
+                <h2>Five-day forecast</h2>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12">
+                <div class="card">
+                  <div class="card-body">
+                    <span class="five-day"> MON</span>
+                    <i class="fas fa-sun future"></i>
+                    <span class="five-day"> 15ºC</span>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-body">
+                    <span class="five-day">TUE</span>
+                    <i class="fas fa-sun future"></i>
+                    <span class="five-day"> 15ºC</span>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-body">
+                    <span class="five-day">WED</span>
+                    <i class="fas fa-sun future"></i>
+                    <span class="five-day"> 15ºC</span>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-body">
+                    <span class="five-day">THU</span>
+                    <i class="fas fa-sun future"></i>
+                    <span class="five-day"> 15ºC</span>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-body">
+                    <span class="five-day">FRI</span>
+                    <i class="fas fa-sun future"></i>
+                    <span class="five-day"> 15ºC</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+    <div class="footer">
+      <a href="https://github.com/pipclubbs/shecodes-weather-app">open-source code</a> by Phillippa Clubbs
+    </div>
+    <script src="src/app.js"></script>
+  </body>
+</html>
